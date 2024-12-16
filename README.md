@@ -1,8 +1,15 @@
 # Clickhouse
 
+## Prerequesite
+Saya menggunakan device sebagai berikut
+2 buah server ubuntu 24.04.1 LTS noble
+1 buah server Rocky Linux 8.10 (Green Obsidian)
+Tidak ada depedensi khusus, hanya install clickhouse server, client dan zookeeper
+
+
 ## Arsitektur
 Disini saya akan membuat satu cluster dimana cluster tersebut memiliki 3 zookeeper dan 2 replica. Berikut arsitekturnya.
-<img src="" alt="clickhouse-arsitektur"/>
+<img src="https://res.cloudinary.com/dvehyvk3d/image/upload/v1734323501/clickhouse_icon_cetkgx.png" alt="clickhouse-arsitektur"/>
 
 ## Port
 | **Port** | **Default Protocol** | **Fungsi**                                                                                             |
