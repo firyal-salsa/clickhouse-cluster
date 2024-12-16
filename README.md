@@ -93,5 +93,5 @@ Sekarang, coba kita buat database, tabel, dan insert data disalah satu node sepe
 <img src="https://res.cloudinary.com/dvehyvk3d/image/upload/v1734335829/Untitled_design_1_lymmtu.png" alt="create-db-table"/>
 
 Sekarang kita test menginput data ke salah satu node dan lihat data tersebut ke node lain.
-<img src="https://res.cloudinary.com/dvehyvk3d/image/upload/v1734335829/Untitled_design_1_lymmtu.png" alt="ingest-data"/>
+<img src="https://res.cloudinary.com/dvehyvk3d/image/upload/v1734336465/Untitled_design_2_sh8vg0.png" alt="ingest-data"/>
 Terlihat bahwa replikasi data berhasil dibuat.
