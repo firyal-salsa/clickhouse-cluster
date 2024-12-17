@@ -4,7 +4,7 @@
 <br>
 Clickhouse adalah open source columnar database management system. Sistem ini dirancang untuk pemrosesan data analitik dengan kecepatan tinggi, yang sering digunakan dalam kebutuhan analisis data besar (big data), singkatnya clickhouse ini OLAP (Online Analytical Processing) jadi kurang cocok untuk transaksi OLTP (Online Transaction Processing).
 
-Saya membangun satu cluster yang terdiri dari tiga buah zookeeper untuk mengkoordinasikan replikasi data dan dua buah server untuk copy data, untuk sumber bisa dicek pada link berikut [dokumentasi clickhouse replikasi](https://clickhouse.com/docs/en/architecture/replication) Tidak hanya membangun cluster, tetapi juga menghubungkan dengan postgreSQL, sumber bisa dilihat di link berikut [dokumentasi clickhouse postgresql](https://clickhouse.com/docs/en/integrations/postgresql#using-clickpipes-powered-by-peerdb).
+Saya membangun satu cluster yang terdiri dari tiga buah zookeeper untuk mengkoordinasikan replikasi data dan dua buah server untuk copy data, untuk sumber bisa dicek pada link berikut [dokumentasi clickhouse replikasi](https://clickhouse.com/docs/en/architecture/replication) Tidak hanya membangun cluster, tetapi juga menghubungkan dengan postgreSQL, sumber bisa dilihat di link berikut [dokumentasi clickhouse postgresql](https://clickhouse.com/docs/en/engines/database-engines/materialized-postgresql).
 
 ## Arsitektur
 <img src="https://res.cloudinary.com/dvehyvk3d/image/upload/v1734333410/Architecture.1S_2R_ReplicatedMergeTree_5-nodes.3.CH.Keeper.nodes.2.CH.nodes-f93c1e2343cf462a8a59b4cb37a6a24e_hz0irg.png" alt="arsitektur-clickhouse"/>
@@ -95,3 +95,12 @@ Sekarang, coba kita buat database, tabel, dan insert data disalah satu node sepe
 Sekarang kita test menginput data ke salah satu node dan lihat data tersebut ke node lain.
 <img src="https://res.cloudinary.com/dvehyvk3d/image/upload/v1734336465/Untitled_design_2_sh8vg0.png" alt="ingest-data"/>
 Terlihat bahwa replikasi data berhasil dibuat.
+
+
+
+# PostgreSQL
+Saya mencoba menghubungkan dengan PostgreSQL di cluster saya dengan command berikut
+<img src="https://res.cloudinary.com/dvehyvk3d/image/upload/v1734425410/Untitled_design_3_nxuxuj.png" />
+
+Disini saya mencoba create data di postgreSQL dan menampilkan data tersebut di clickhouse node 1 dan node 2
+<img src="https://res.cloudinary.com/dvehyvk3d/image/upload/v1734425964/Untitled_design_4_zmjuj0.png" />
